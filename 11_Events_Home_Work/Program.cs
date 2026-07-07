@@ -22,6 +22,7 @@ internal class Program
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("press ESC to exit");
         Console.ResetColor();
+        Console.WriteLine();
 
 
         while (true)
