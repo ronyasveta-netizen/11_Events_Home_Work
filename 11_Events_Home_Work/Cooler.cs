@@ -8,15 +8,15 @@ namespace _11_Events_Home_Work
     {
         public string Name { get; set; }
 
-        public void Cool(HotHouse h)
+        public void Cool(HotHouse house)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"Cooler {Name} decreases temperature by 5°C ");
             Console.ResetColor();
-            h.Temperature -= 5;
+            house.Temperature -= 5;
         }
 
-        public void Stop(HotHouse h)
+        public void Stop(HotHouse house)
         {
             Console.WriteLine($"Cooler {Name} is OFF ");  // якщо подія Well — "пристрій вимикається"
         }
