@@ -40,20 +40,22 @@ namespace _11_Events_Home_Work
             if (_temperature > MaxTemp)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Too hot in the hothouse!"); //   повідомляємо і запускаємо подію TooHot
+                Console.WriteLine("!!! Too hot in the hothouse !!!"); //   повідомляємо і запускаємо подію TooHot
                 Console.ResetColor();
                 TooHot?.Invoke(this);
             }
             else if (_temperature < MinTemp)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Too cold in the hothouse!"); // повідомляємо і запускаємо подію TooCold  
+                Console.WriteLine("!!! Too cold in the hothouse !!!"); // повідомляємо і запускаємо подію TooCold  
                 Console.ResetColor();
                 TooCold?.Invoke(this);
             }
             else
             {
-                Console.WriteLine("Temperature is normal."); // повідомляємо і запускаємо подію Well?
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Temperature is norma"); // повідомляємо і запускаємо подію Well?
+                Console.ResetColor();
                 Well?.Invoke(this);
             }
         }
